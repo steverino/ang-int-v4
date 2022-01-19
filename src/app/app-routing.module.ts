@@ -2,7 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+import { CardsComponent } from './cards/cards.component';
+
+const routes: Routes = [
+  { path: '', component: CardsComponent },
+  { path: 'cards', component: CardsComponent },
+];
 
 @NgModule({
   declarations: [],
