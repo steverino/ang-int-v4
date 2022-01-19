@@ -1,4 +1,4 @@
-<div *ngFor="let card of cards" class="border">
+<!-- <div class="border">
     <p>{{ card.id }}</p>
     <ul>
         <li>{{ card.image }}</li>
@@ -7,5 +7,36 @@
         <li>{{ card.price }}</li>
         
     </ul>
-</div>
+</div> -->
 
+
+<div id="outer"  *ngFor="let card of cards" >
+    <div id="card-container" >
+      <h2>{{ card.title }}</h2>
+      <ul>
+        <li class="card-image">
+          <img src="{{ card.image }}" alt="{{ card.title }}">
+          
+        </li>
+        <li>{{ card.title }}</li>
+        <hr />
+        <li>{{ card.owner }}</li>
+      </ul>
+      <button id="buy-btn" *ngIf="card.forSale === true; else blank">
+        <ul>
+          <li>BUY</li>
+          <li>{{ card.price }}</li>
+        </ul>
+      </button>
+      <ng-template #blank>
+       <div class="fill">
+        <ul>
+          <li></li>
+          <li></li>
+        </ul>
+       </div>
+      </ng-template>
+    </div>
+    
+  </div>
+  
