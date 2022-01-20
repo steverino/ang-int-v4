@@ -12,7 +12,7 @@
                     id="card-name"
                     name="card-name" 
                     placeholder="Card Name"
-                    
+                    [(ngModel)]="userInput"
                     >
                 </li>
                 <li>
@@ -33,7 +33,7 @@
         </section>
         <button type="submit">Make card</button>
     </form> 
-   
+    {{ userInput }}
     </div>
     
     
