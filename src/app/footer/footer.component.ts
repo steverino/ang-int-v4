@@ -8,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit {
 
   currentYear = new Date().getFullYear();
+
+  openLink(){
+    window.open("https://www.militarynewbie.com/constitution/")
+  }
   
   constructor() { }
 

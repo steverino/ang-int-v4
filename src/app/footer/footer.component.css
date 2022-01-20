@@ -1,0 +1,9 @@
+a {
+    font-weight: bolder;
+
+}
+
+a:hover {
+    color: gold;
+    cursor: pointer;
+}

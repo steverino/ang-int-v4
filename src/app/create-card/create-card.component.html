@@ -1,5 +1,5 @@
 <div id="create-container">
-    <form action="#" method="post" id="new-card"> 
+    <form [formGroup]="cardUploadForm" (ngSubmit)="onSubmit()"> 
         <section id="image-drop">
             <input type="file" name="card-upload" id="card-upload">
         </section>
@@ -9,23 +9,29 @@
                 <li>
                     <label for="name">Card Name</label>
                     <input type="text" 
-                    id="card-name"
-                    name="card-name" 
+                    id="cardName"
+                    name="cardName"
+                    formControlName="cardName" 
                     placeholder="Card Name"
-                    [(ngModel)]="userInput"
+                    
                     >
+                    <div class="error"  >Card Name Required</div>
                 </li>
                 <li>
                     <label for="owner">Card Owner</label>
                     <input type="text" 
-                    id="owner" 
+                    id="cardOwner" 
+                    name="cardName"
+                    formControlName="cardOwner" 
                     placeholder="Card Owner" 
                     >
                 </li>
                 <li>
                     <label for="price">For Sale</label>
                     <input type="text" 
-                    id="price" 
+                    id="price"
+                    name="price" 
+                    formControlName="price" 
                     placeholder="Price" 
                     >
                 </li>
@@ -33,7 +39,7 @@
         </section>
         <button type="submit">Make card</button>
     </form> 
-    {{ userInput }}
+    
     </div>
     
     
