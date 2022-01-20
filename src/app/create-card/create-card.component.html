@@ -15,13 +15,13 @@
                     placeholder="Card Name"
                     
                     >
-                    <div class="error"  >Card Name Required</div>
+                    
                 </li>
                 <li>
                     <label for="owner">Card Owner</label>
                     <input type="text" 
                     id="cardOwner" 
-                    name="cardName"
+                    name="cardOwner"
                     formControlName="cardOwner" 
                     placeholder="Card Owner" 
                     >
@@ -39,7 +39,14 @@
         </section>
         <button type="submit">Make card</button>
     </form> 
-    
+    <section>
+        <ul>
+            <li>{{ cardUploadForm.value.cardName }}</li>
+            <li>{{ cardUploadForm.value.cardOwner }}</li>
+            <li>{{ cardUploadForm.value.price }}</li>
+        </ul>
+        
+    </section>
     </div>
     
     
