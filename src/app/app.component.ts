@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Card } from './card';
+import { CARDS } from './card-collection';
+import { CardService } from './cards.service';
 
 
 @Component({
@@ -7,5 +10,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  cards: Card[] = CARDS;
+
   title = 'ang-int-v4';
 }

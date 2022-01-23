@@ -2,7 +2,6 @@
     border: 1px solid #000;
 }
 
-
 #card-container {
     width: 20rem;
     text-align: center;
@@ -25,7 +24,6 @@
     object-fit: contain;
     
 }
-
 
 .card-image {
     width: 15rem;

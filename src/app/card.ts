@@ -1,12 +1,12 @@
-export class Card {
+export interface Card {
     
 
-    constructor ( public id: number, 
-                  public image: string, 
-                  public title: string, 
-                  public owner: string, 
-                  public price: string,
-                  public forSale: boolean ) {
+    id: number, 
+    image: string, 
+    title: string, 
+    owner: string, 
+    price: string,
+    forSale: boolean,  
 
-    }
+    
   }
