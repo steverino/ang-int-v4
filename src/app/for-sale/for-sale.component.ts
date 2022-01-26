@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Card } from '../card';
 import { CardService } from '../cards.service';
-import { CARDS } from '../card-collection';
+//import { CARDS } from '../card-collection'; removed, because services is doing the job now
 
 
 @Component({
@@ -12,19 +12,23 @@ import { CARDS } from '../card-collection';
 export class ForSaleComponent implements OnInit {
 
 
-  cards: Card[] = CARDS;
+  //cards: Card[] = CARDS; removed, because services is doing the job now
+  cards: Card[] = [];
 
-  constructor() { }
+  constructor(public cardService: CardService) { }
+
+  getForSale(): void{
+    this.cardService.getForSale(true)
+      .subscribe(cards => this.cards = cards);
+  }   
 
   ngOnInit(): void {
-    for(let card of this.cards){
-      if(card.forSale == true){
-        //SHOW THE CARDS FOR SALE IN HTML {{ THESE cards ARE FOR SALE }}
-      }
+    this.getForSale();
       
     }
+  
   }
   
  
     
-}
+

@@ -14,14 +14,13 @@ export class CardService {
   getCards(): Observable<Card[]> {
     const cards = of(CARDS);
     return cards;
-    
-    
+  
   }
 
-  // getForSale() {
-  //   const fs = of(CARDS).subscribe(forSale => console.log('forSale:', forSale));   
-  //   return fs;
-  // }
+  getForSale(forSale: boolean): Observable<Card[]> {
+    const cards = of(CARDS);
+    return cards;
+  }
   
   
 }
