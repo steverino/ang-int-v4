@@ -1,21 +1,31 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
+import { CardService } from '../cards.service';
 
+import { CARDS } from '../card-collection';
 import { Card } from '../card';
 
 @Component({
   selector: 'app-create-card',
   templateUrl: './create-card.component.html',
-  styleUrls: ['./create-card.component.css']
+  styleUrls: ['./create-card.component.css'],
+  providers: [CardService]
 })
 export class CreateCardComponent implements OnInit {
 
-  cardUploadForm = new FormGroup({})
+  cards: Card[] = CARDS;
   
-  constructor() { }
+  cardUploadForm = new FormGroup({})
+  cardName = '';
+  cardOwner = '';
+  price = '';
+
+  constructor(private cardservice: CardService) { }
 
   ngOnInit() {
+    
+
     this.cardUploadForm = new FormGroup({
       'cardName': new FormControl(null),
       'cardOwner': new FormControl(null),

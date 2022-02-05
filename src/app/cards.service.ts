@@ -5,22 +5,22 @@ import { Card } from './card'; //This is the interface
 import { CARDS } from './card-collection'; // This is the file with the data
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CardService {
 
-  constructor() { }
+  cards: Card[] = [];
+  constructor() {}
 
   getCards(): Observable<Card[]> {
     const cards = of(CARDS);
     return cards;
-  
   }
 
-  getForSale(forSale: boolean): Observable<Card[]> {
+  getForSaleCards(): Observable<Card[]> {
     const cards = of(CARDS);
+    
     return cards;
+    
   }
-  
-  
 }

@@ -1,8 +1,9 @@
 import { Card } from './card';
 
 
+//CARDS is an Array of Objects. Its TYPE is Card[], the imported 'interface' { Card }
 
-export const CARDS: Card[] = [
+export const CARDS: Card[] = [ 
     {
         id: 1,
         image: 'assets/images/card1.jpg',

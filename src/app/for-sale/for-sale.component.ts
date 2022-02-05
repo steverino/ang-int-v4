@@ -1,34 +1,37 @@
 import { Component, OnInit } from '@angular/core';
 import { Card } from '../card';
 import { CardService } from '../cards.service';
-//import { CARDS } from '../card-collection'; removed, because services is doing the job now
-
+import { CARDS } from '../card-collection'; 
 
 @Component({
   selector: 'app-for-sale',
   templateUrl: './for-sale.component.html',
-  styleUrls: ['./for-sale.component.css']
+  styleUrls: ['./for-sale.component.css'],
+  providers: [CardService]
 })
 export class ForSaleComponent implements OnInit {
 
-
-  //cards: Card[] = CARDS; removed, because services is doing the job now
   cards: Card[] = [];
+  forSale = '';
 
-  constructor(public cardService: CardService) { }
+  constructor(private cardService: CardService) { }
 
-  getForSale(): void{
-    this.cardService.getForSale(true)
-      .subscribe(cards => this.cards = cards);
-  }   
-
-  ngOnInit(): void {
-    this.getForSale();
+  getCards(): any {
+    let fsCards;
+    this.cardService.getCards().subscribe(cards => this.cards = cards);
+    
+    for(let i=0; i < this.cards.length; i++){
+      if(this.cards[i].forSale === true){
+        fsCards = this.cards[i];
+        console.log(fsCards);  
+      }
       
     }
-  
+    
+  }
+  ngOnInit(): void {
+    this.getCards();
   }
   
- 
-    
+  }
 
