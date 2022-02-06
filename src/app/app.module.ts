@@ -10,6 +10,7 @@ import { CardsComponent } from './cards/cards.component';
 import { CardDetailsComponent } from './card-details/card-details.component';
 import { CreateCardComponent } from './create-card/create-card.component';
 import { ForSaleComponent } from './for-sale/for-sale.component';
+import { SoldComponent } from './sold/sold.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ForSaleComponent } from './for-sale/for-sale.component';
     CardsComponent,
     CardDetailsComponent,
     CreateCardComponent,
-    ForSaleComponent
+    ForSaleComponent,
+    SoldComponent
   ],
   imports: [
     BrowserModule,
