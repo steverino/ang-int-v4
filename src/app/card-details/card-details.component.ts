@@ -11,15 +11,21 @@ import { CARDS } from '../card-collection';
 })
 export class CardDetailsComponent implements OnInit {
 
-  cards: Card[] = [];
-
-  constructor(private cardService: CardService) { }
-
-  getCards(): void {
-    this.cardService.getCards().subscribe(cards => this.cards = cards);
-  }
-  ngOnInit(): void {
-    this.getCards();
-  }
+  cards = this.cardService.getCards();
   
+
+  constructor(private cardService: CardService) {
+    
+   }
+
+  // getCards(): void {
+    
+  //   this.cardService.getCards().subscribe(cards => this.cards = cards);
+  // }
+  ngOnInit(): void {
+    this.cards = this.cardService.getCards();
+        
+  }
+
+   
 }

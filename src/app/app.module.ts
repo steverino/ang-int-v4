@@ -11,6 +11,8 @@ import { CardDetailsComponent } from './card-details/card-details.component';
 import { CreateCardComponent } from './create-card/create-card.component';
 import { ForSaleComponent } from './for-sale/for-sale.component';
 import { SoldComponent } from './sold/sold.component';
+import { CardService } from './cards.service';
+import { AllCardsComponent } from './all-cards/all-cards.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { SoldComponent } from './sold/sold.component';
     CardDetailsComponent,
     CreateCardComponent,
     ForSaleComponent,
-    SoldComponent
+    SoldComponent,
+    AllCardsComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,7 @@ import { SoldComponent } from './sold/sold.component';
     
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [CardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

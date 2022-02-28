@@ -16,25 +16,25 @@ export class CreateCardComponent implements OnInit {
 
   cards: Card[] = CARDS;
   
-  cardUploadForm = new FormGroup({})
-  cardName = '';
-  cardOwner = '';
-  price = '';
+  cardUploadForm = new FormGroup({
+  cardName: new FormControl(''),
+  cardOwner: new FormControl(''),
+  price: new FormControl(''),
+
+});
 
   constructor(private cardservice: CardService) { }
 
   ngOnInit() {
-    
-
-    this.cardUploadForm = new FormGroup({
-      'cardName': new FormControl(null),
-      'cardOwner': new FormControl(null),
-      'price': new FormControl(null)
-    });
+  
   }
 
   onSubmit() {
-    console.log(this.cardUploadForm);
+    // TODO: Use EventEmitter with form value
+    console.log(this.cardUploadForm.value);
   }
+  // onSubmit() {
+  //   console.log(this.cardUploadForm);
+  // }
 
 }
