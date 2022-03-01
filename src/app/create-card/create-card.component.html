@@ -1,7 +1,7 @@
 <div id="create-container">
     <form [formGroup]="cardUploadForm" (ngSubmit)="onSubmit()"> 
         <section id="image-drop">
-            <input type="file" name="card-upload" id="card-upload">
+            <input type="file" name="card-upload" id="card-upload" onchange="console.log(event.target.files)">
         </section>
         <section id="card-info">
             <ul>
@@ -37,7 +37,7 @@
                 </li>
             </ul>
         </section>
-        <button type="submit">Make card</button>
+        <button type="submit" [disabled]="!cardUploadForm.valid">Make card</button>
     </form> 
     <section>
         <ul>

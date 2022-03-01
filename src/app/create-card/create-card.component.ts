@@ -10,24 +10,22 @@ import { Card } from '../card';
   selector: 'app-create-card',
   templateUrl: './create-card.component.html',
   styleUrls: ['./create-card.component.css'],
-  providers: [CardService]
+  providers: [CardService],
 })
 export class CreateCardComponent implements OnInit {
-
   cards: Card[] = CARDS;
-  
+
   cardUploadForm = new FormGroup({
-  cardName: new FormControl(''),
-  cardOwner: new FormControl(''),
-  price: new FormControl(''),
+    cardName: new FormControl(''),
+    cardOwner: new FormControl(''),
+    price: new FormControl(''),
+  });
 
-});
 
-  constructor(private cardservice: CardService) { }
 
-  ngOnInit() {
-  
-  }
+  constructor(private cardservice: CardService) {}
+
+  ngOnInit() {}
 
   onSubmit() {
     // TODO: Use EventEmitter with form value
@@ -36,5 +34,4 @@ export class CreateCardComponent implements OnInit {
   // onSubmit() {
   //   console.log(this.cardUploadForm);
   // }
-
 }

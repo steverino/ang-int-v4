@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CardService } from '../cards.service';
+
 
 @Component({
   selector: 'app-sold',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SoldComponent implements OnInit {
 
-  constructor() { }
+  cards = this.cardService.getCards();
+  
+  constructor(private cardService: CardService) {}
 
   ngOnInit(): void {
+    this.cards = this.cardService.getCards();
+    console.log(this.cards);
   }
-
 }

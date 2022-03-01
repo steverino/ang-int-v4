@@ -1,6 +1,6 @@
-<div *ngFor="let card of cards" [ngClass]="{'remove-card': card.forSale !== true}">
+<div id="outer" *ngFor="let card of cards" [ngClass]="{'remove-card': card.forSale !== true}">
   
-<div id="outer"  *ngIf="card.forSale === true">
+<div *ngIf="card.forSale === true">
  
     <div>
       <div id="card-container">

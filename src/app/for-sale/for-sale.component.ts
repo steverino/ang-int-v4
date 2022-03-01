@@ -8,7 +8,7 @@ import { CARDS } from '../card-collection';
   selector: 'app-for-sale',
   templateUrl: './for-sale.component.html',
   styleUrls: ['./for-sale.component.css'],
-  providers: [ForSaleService],
+  
 })
 export class ForSaleComponent implements OnInit {
   

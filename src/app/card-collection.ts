@@ -72,7 +72,7 @@ export const CARDS: Card[] = [
         title: 'Karma Kat',
         owner: 'Gary',
         price: '$100',
-        forSale: true,
+        forSale: false,
 
     },
     {

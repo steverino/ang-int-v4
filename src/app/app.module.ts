@@ -29,7 +29,7 @@ import { AllCardsComponent } from './all-cards/all-cards.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    
+        
     ReactiveFormsModule,
   ],
   providers: [CardService],
