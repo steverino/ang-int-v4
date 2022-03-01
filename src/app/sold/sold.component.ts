@@ -15,6 +15,6 @@ export class SoldComponent implements OnInit {
 
   ngOnInit(): void {
     this.cards = this.cardService.getCards();
-    console.log(this.cards);
+    
   }
 }
