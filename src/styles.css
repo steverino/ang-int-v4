@@ -1,7 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-app-card-details, app-for-sale, app-sold  {
+/* app-card-details, app-for-sale, app-sold  {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1em;
+} */
+
+.container  {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+}
+
+.remove-card {
+    display: none;
 }

@@ -13,11 +13,10 @@ export class CardService {
   constructor() {}
 
   getCards() {
-    let cards = Object.values(CARDS);
+    let cards = Object.values(CARDS);//takes card-collection values and puts them into an Array
     
-    return cards;
+    return cards; //These are the CARDS Array values, Which Are Objects.
     
   }
-  
   
 }

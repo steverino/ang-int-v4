@@ -1,0 +1,13 @@
+#sub-nav {
+    margin: 0 0 2rem 2rem; 
+    
+}
+
+#sub-nav ul {
+
+    display: flex;
+}
+
+#sub-nav li {
+    margin-right: 1rem;
+}

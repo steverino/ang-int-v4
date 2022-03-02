@@ -10,6 +10,7 @@ import { CARDS } from '../card-collection';
   styleUrls: ['./for-sale.component.css'],
   
 })
+
 export class ForSaleComponent implements OnInit {
   
   cards = this.cardService.getCards();

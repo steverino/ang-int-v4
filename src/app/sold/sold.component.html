@@ -1,10 +1,13 @@
+<app-sub-nav></app-sub-nav>
+<div class="container">
 <div  id="outer"
   *ngFor="let card of cards"
   [ngClass]="{ 'remove-card': card.forSale !== false }"
 >
+
   <div *ngIf="card.forSale === false">
     <div>
-      <div id="card-container">
+      <div class="card-container">
         <h2>{{ card.title }}</h2>
         <ul>
           <li class="card-image">
@@ -17,4 +20,5 @@
       </div>
     </div>
   </div>
+</div>
 </div>

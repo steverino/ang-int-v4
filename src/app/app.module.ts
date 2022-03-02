@@ -13,6 +13,7 @@ import { ForSaleComponent } from './for-sale/for-sale.component';
 import { SoldComponent } from './sold/sold.component';
 import { CardService } from './cards.service';
 import { AllCardsComponent } from './all-cards/all-cards.component';
+import { SubNavComponent } from './sub-nav/sub-nav.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AllCardsComponent } from './all-cards/all-cards.component';
     CreateCardComponent,
     ForSaleComponent,
     SoldComponent,
-    AllCardsComponent
+    AllCardsComponent,
+    SubNavComponent
   ],
   imports: [
     BrowserModule,
