@@ -1,13 +1,18 @@
 #sub-nav {
-    margin: 0 0 2rem 2rem; 
-    
+  margin: 0 0 2rem 2rem;
 }
 
 #sub-nav ul {
-
-    display: flex;
+  display: flex;
 }
 
 #sub-nav li {
-    margin-right: 1rem;
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+#sub-nav li:hover {
+  border-radius: 0.25rem;
+  background-color: rgb(150, 150, 150);
+  cursor: pointer;
 }
