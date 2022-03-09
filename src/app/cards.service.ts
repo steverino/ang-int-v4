@@ -14,9 +14,9 @@ export class CardService {
 
   getCards() {
     let cards = Object.values(CARDS);//takes card-collection values and puts them into an Array
-    
+    //console.log(cards);
     return cards; //These are the CARDS Array values, Which Are Objects.
-    
+        
   }
-  
+   
 }

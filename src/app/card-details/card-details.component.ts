@@ -24,7 +24,7 @@ export class CardDetailsComponent implements OnInit {
   // }
   ngOnInit(): void {
     this.cards = this.cardService.getCards();
-        
+  
   }
 
    
