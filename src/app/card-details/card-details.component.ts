@@ -11,20 +11,19 @@ import { CARDS } from '../card-collection';
 })
 export class CardDetailsComponent implements OnInit {
 
-  cards = this.cardService.getCards();
-  
+  cards: Card[] = [];
+    
 
   constructor(private cardService: CardService) {
     
    }
 
-  // getCards(): void {
-    
-  //   this.cardService.getCards().subscribe(cards => this.cards = cards);
-  // }
+  getCards(): void {
+    this.cardService.getCards().subscribe(cards => this.cards = cards);
+  }
+
   ngOnInit(): void {
-    this.cards = this.cardService.getCards();
-  
+    this.getCards();
   }
 
    

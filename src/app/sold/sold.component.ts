@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+
+import { Card } from '../card';
 import { CardService } from '../cards.service';
 
 
@@ -9,12 +11,15 @@ import { CardService } from '../cards.service';
 })
 export class SoldComponent implements OnInit {
 
-  cards = this.cardService.getCards();
+  cards: Card[] = [];
   
   constructor(private cardService: CardService) {}
 
+  getCards(): void {
+    this.cardService.getCards().subscribe(cards => this.cards = cards);
+  }
+
   ngOnInit(): void {
-    this.cards = this.cardService.getCards();
-    
+    this.getCards();
   }
 }

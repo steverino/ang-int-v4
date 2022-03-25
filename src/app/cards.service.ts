@@ -9,14 +9,14 @@ import { CARDS } from './card-collection'; // This is the file with the data
 })
 export class CardService {
   cards: Card[] = [];
-
+  
   constructor() {}
 
-  getCards() {
-    let cards = Object.values(CARDS);//takes card-collection values and puts them into an Array
-    //console.log(cards);
+  getCards(): Observable<Card[]> {
+    
+    const cards = of(CARDS);
     return cards; //These are the CARDS Array values, Which Are Objects.
-        
+    
   }
    
 }

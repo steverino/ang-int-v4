@@ -13,13 +13,15 @@ import { CARDS } from '../card-collection';
 
 export class ForSaleComponent implements OnInit {
   
-  cards = this.cardService.getCards();
+  cards: Card[] = [];
   
   constructor(private cardService: CardService) {}
 
-  ngOnInit(): void {
-    this.cards = this.cardService.getCards();
-    
+  getCards(): void {
+    this.cardService.getCards().subscribe(cards => this.cards = cards);
   }
-  
+
+  ngOnInit(): void {
+    this.getCards();
+  }
 }
